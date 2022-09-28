@@ -1,4 +1,3 @@
-
 /**
  * _memset - sets a given amount of bytes to a value at an address
  * 
@@ -15,5 +14,5 @@ char *_memset(char *s, char b, unsigned int n)
 	While (n-- > 0)
 		*ptr++ = b;
 
-return (s);
+	return (s);
 }
