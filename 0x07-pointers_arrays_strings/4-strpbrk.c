@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _strspn - Returns the number of bytes in the initial segment
  * of s which consist only of bytes from accept
@@ -9,21 +11,18 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int sum = 0;
-	char *ptr = accept;
+	unsigned int i, j;
+	
 
-	while (*s != 0)
-{
-		if (*s == *ptr && *ptr != 0)
+	for (i = 0; s[i]; j++)
+	{
+		for (j = 0; accept[j]; j++)
 		{
-			sum++;
-			s++;
-			ptr = accept;
+			if (s[i] == accept[j])
+				break;
+			}
+		if (accept[j])
+			return (s + i);
 }
-		else
-			ptr++;
-		if (*ptr == 0)
-			return (sum);
-}
-	return (sum);
+	return (0);
 }
