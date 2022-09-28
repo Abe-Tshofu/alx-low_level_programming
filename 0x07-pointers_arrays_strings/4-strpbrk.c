@@ -9,7 +9,7 @@
  *
  * Return: number of bytes that matched at start of string
  */
-char * _strbrk(char *s, char *accept)
+char * _strpbrk(char *s, char *accept)
 {
 	unsigned int i, j;
 	
